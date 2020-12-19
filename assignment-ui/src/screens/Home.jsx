@@ -1,5 +1,5 @@
 import React from 'react'
-import Header from '../components/Header'
+import Layout from '../components/Layout'
 import Cookies from 'js-cookie'
 import Authapi from '../hooks/Authapi'
 
@@ -14,7 +14,7 @@ const Home = () => {
 
     return (
         <div>
-            <Header handleLogout={handleLogout}/>
+            <Layout handleLogout={handleLogout}/>
         </div>
     )
 }
