@@ -1,10 +1,11 @@
 import './App.css';
-import { Route, Switch, BrowserRouter, Redirect } from "react-router-dom";
-import Home from './Components/Home'
-import Authapi from './Components/Authapi'
+import {Switch, BrowserRouter} from "react-router-dom";
+import Home from './screens/Home'
+import Authapi from './hooks/Authapi'
 import {useState,useEffect} from 'react'
 import Cookies from 'js-cookie'
-import Login from './Components/Login'
+import Login from './screens/Login'
+import {PrivateRoute,PrivateLogin} from './routes'
 
 function App() {
 
@@ -35,37 +36,6 @@ function App() {
       </Authapi.Provider>
     </div>
   );
-}
-
-const PrivateRoute = ({auth,component: Component, ...rest }) => {
-  return(
-    <Route 
-    {...rest} 
-    render={props=>
-    (auth?(
-      <Component {...props}/>
-    ):
-    (
-      <Redirect to='/'/>
-    ))
-    }
-   />
-  )
-}
-const PrivateLogin = ({auth,component: Component, ...rest }) => {
-  return(
-    <Route 
-    {...rest} 
-    render={props=>
-    (!auth?(
-      <Component {...props}/>
-    ):
-    (
-      <Redirect to='/home'/>
-    ))
-    }
-   />
-  )
 }
 
 

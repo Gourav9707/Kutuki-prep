@@ -1,7 +1,7 @@
 import React from 'react'
-import Drawer from './Drawer'
+import Header from '../components/Header'
 import Cookies from 'js-cookie'
-import Authapi from './Authapi'
+import Authapi from '../hooks/Authapi'
 
 const Home = () => {
 
@@ -14,7 +14,7 @@ const Home = () => {
 
     return (
         <div>
-            <Drawer handleLogout={handleLogout}/>
+            <Header handleLogout={handleLogout}/>
         </div>
     )
 }

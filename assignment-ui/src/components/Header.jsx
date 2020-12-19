@@ -13,7 +13,7 @@ import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
-import Logo from './logo.png'
+import Logo from '../logo.png'
 import Avatar from '@material-ui/core/Avatar';
 import Button from '@material-ui/core/Button';
 

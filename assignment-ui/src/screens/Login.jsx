@@ -1,8 +1,8 @@
 import React from 'react'
-import firebase from '../firebase'
+import firebase from '../services/firebase'
 import * as firebaseui from "firebaseui"
 import {useEffect} from 'react'
-import Authapi from './Authapi';
+import Authapi from '../hooks/Authapi';
 import Cookies from 'js-cookie'
 
 const Login = (props) => {
